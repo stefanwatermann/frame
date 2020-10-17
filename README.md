@@ -6,7 +6,7 @@ Web-Oberfläche an Port 9001 erlaubt die Steuerung des Raspberry (Ausschalten,
 Neu starten, Nächtes Foto, ...).
 
 ## Installation
-1) Die Dateien des kompilietren Projektes auf den Raspiberry nach "/home/pi/RaspiFrame" kopieren.
+1) Die Dateien des kompilietren Projektes (RaspiFrame_1.0.zip) auf den Raspiberry nach "/home/pi/RaspiFrame" kopieren.
 2) Die Konfigurtationsdatei "RaspiFrame.config" im Ordner "RaspiFrame Resources" anpassen.
 3) Fotos nach "/home/pi/Pictures" kopieren (dazu Samba auf dem Raspberry installieren).
 4) "./RaspiFrame &" starten und wenn alles läuft als Autostart konfigurieren.
