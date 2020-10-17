@@ -37,7 +37,7 @@ sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
 Admin Oberfläche
 ----------------
 
-Die Web-Oberfläche ist über http://<hostname>:9001 zu erreichen:
+Die Web-Oberfläche ist über http://[hostname]:9001 zu erreichen:
 
 ![Web-Oberfläche](https://github.com/stefanwatermann/frame/blob/main/Screenshots/FrameControl.png)
 
