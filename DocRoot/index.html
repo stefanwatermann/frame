@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Raspi-Frame control panel, v1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Frame Control</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="jquery.js"></script>
+	<script src="app.js"></script>
+</head>
+
+<body>
+	<div id="header">
+		<div id="header-content">
+			<div class="content text-big middle center">Frame Control</div>
+		</div>
+	</div>
+
+	<div id="main-content">
+
+		<h2>Raspberry</h2>
+		<div>
+			<button onclick="doShutdown(false)">Ausschalten</button> &nbsp;
+			<button onclick="doShutdown(true)">Reboot</button>
+		</div>
+
+		<div class="space">&nbsp;</div>
+
+		<h2>Bildschirm</h2>
+		<div>
+			<button onclick="doScreen(true)">Ausschalten</button> &nbsp;
+			<button onclick="doScreen(false)">Einschalten</button>
+		</div>
+
+		<div class="space">&nbsp;</div>
+
+		<h2>Raspi-Frame</h2>
+		<div>
+			<button onclick="doNext()">Nächstes Foto</button> &nbsp;
+			<button onclick="doDeleteCurrent()">Aktuelles Foto löschen</button> &nbsp;
+			<button onclick="doReload()">Fotos einlesen</button> &nbsp;
+			<button onclick="doConfig()">Config einlesen</button>
+		</div>
+
+		<!--
+    		<div class="space">&nbsp;</div>
+    		
+    		<div>
+    			<form id="form-upload" method="post" enctype="multipart/form-data" action="/?upload">
+		    			<label>Neues Foto hochladen 
+		    				<input type="file" onchange="doUpload()" accept="image/*"></input>
+		    			</label>
+		    		</form>
+    		</div>
+    		-->
+	</div>
+
+	<div class="space">&nbsp;</div>
+	
+	<div id="footer">
+		<div id="footer-content" class="content">
+			<div id="footer-info" class="content text-small middle center"></div>
+		</div>
+	</div>
+
+</body>
+
+</html>
