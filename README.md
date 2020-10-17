@@ -44,7 +44,7 @@ Die Web-Oberfläche ist über http://[hostname]:9001 zu erreichen:
 
 DIY Foto-Rahmen Beispiele
 -------------------------
-13 Zoll Dispaly eines alten Laptops in einem Rahmen aus Erlenholz.
+Wiederverwertetes 13 Zoll Display eines defekten Laptops in einem Rahmen aus Erlenholz.
 
 ![Foto-Rahmen](https://github.com/stefanwatermann/frame/blob/main/Screenshots/RaspiFrame.JPG)
 
