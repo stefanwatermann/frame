@@ -285,6 +285,7 @@ End
 		  TimerChangePicture.Period = 1000 * Config.PictureChangeIntervalSec
 		  TimerChangePicture.Enabled = True
 		  TimerFadePicture.Period = Config.FadeTimer
+		  
 		  TimerClock.Enabled = Config.ShowClock
 		  
 		  StartWebServer
@@ -319,7 +320,7 @@ End
 		      f = Nil
 		      
 		      CurrentPictureIndex = CurrentPictureIndex + 1
-		      If CurrentPictureIndex > PictureFiles.Count Then
+		      If CurrentPictureIndex >= PictureFiles.Count Then
 		        CurrentPictureIndex = 0
 		        RandomizePictures
 		      End

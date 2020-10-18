@@ -31,6 +31,38 @@ Protected Module File
 		End Function
 	#tag EndMethod
 
+	#tag Method, Flags = &h0
+		Function ReadAsJson(Extends f as FolderItem) As String
+		  // read text from a file and remove lines starting with // (comments)
+		  Return f.ReadAsJson(Encodings.UTF8)
+		  
+		  
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Function ReadAsJson(Extends f as FolderItem, encoding as TextEncoding) As String
+		  // read text from a file and remove lines starting with // (comments)
+		  
+		  Var t As TextInputStream = TextInputStream.Open(f)
+		  t.Encoding = Encoding
+		  
+		  Var result() As String
+		  While Not t.EndOfFile
+		    Var line As String = t.ReadLine
+		    If Not line.Trim.BeginsWith("//") and line.Trim.Length > 0 Then
+		      result.AddRow(line)
+		    End
+		  Wend
+		  
+		  t.Close
+		  
+		  Return String.FromArray(result, EndOfLine)
+		  
+		  
+		End Function
+	#tag EndMethod
+
 
 	#tag ViewBehavior
 		#tag ViewProperty

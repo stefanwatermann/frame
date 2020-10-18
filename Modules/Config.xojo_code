@@ -8,7 +8,7 @@ Protected Module Config
 		    
 		    If configFile <> Nil And configFile.Exists And Not configFile.IsFolder Then
 		      
-		      Var json As String = configFile.ReadAllText()
+		      Var json As String = configFile.ReadAsJson()
 		      Var config As New JSONItem
 		      config.Load(json)
 		      
@@ -77,12 +77,12 @@ Protected Module Config
 		      Logging.Error("Cannot read config-file '" + configFile.NativePath + "'.")
 		    End
 		    
+		    Logging.Info("PicturesFolder: " + PicturesFolder.NativePath)
+		    Logging.Info("PictureChangeIntervalSec: " + Str(PictureChangeIntervalSec))
+		    
 		  Catch e As RuntimeException
 		    Logging.Error(e)
 		  End
-		  
-		  Logging.Info("PicturesFolder: " + PicturesFolder.NativePath)
-		  Logging.Info("PictureChangeIntervalSec: " + Str(PictureChangeIntervalSec))
 		  
 		  
 		End Sub
@@ -271,23 +271,23 @@ Protected Module Config
 			Group="Behavior"
 			InitialValue="sudo reboot"
 			Type="String"
-			EditorType=""
+			EditorType="MultiLineEditor"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="ScreenOffCommand"
 			Visible=false
 			Group="Behavior"
-			InitialValue="sudo bash -c """"echo 1 > /sys/class/backlight/rpi_backlight/bl_power"""""
+			InitialValue="sudo bash -c ""echo 1 > /sys/class/backlight/rpi_backlight/bl_power"""
 			Type="String"
-			EditorType=""
+			EditorType="MultiLineEditor"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="ScreenOnCommand"
 			Visible=false
 			Group="Behavior"
-			InitialValue="sudo bash -c """"echo 0 > /sys/class/backlight/rpi_backlight/bl_power"""""
+			InitialValue="sudo bash -c ""echo 0 > /sys/class/backlight/rpi_backlight/bl_power"""
 			Type="String"
-			EditorType=""
+			EditorType="MultiLineEditor"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="ShutdownCommand"
@@ -295,7 +295,7 @@ Protected Module Config
 			Group="Behavior"
 			InitialValue="sudo shutdown -h now"
 			Type="String"
-			EditorType=""
+			EditorType="MultiLineEditor"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="WebServerPort"
@@ -303,6 +303,14 @@ Protected Module Config
 			Group="Behavior"
 			InitialValue="9001"
 			Type="Integer"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="FadePictures"
+			Visible=false
+			Group="Behavior"
+			InitialValue="true"
+			Type="Boolean"
 			EditorType=""
 		#tag EndViewProperty
 	#tag EndViewBehavior
