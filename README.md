@@ -39,15 +39,15 @@ Admin Oberfläche
 
 Die Web-Oberfläche ist über http://[hostname]:9001 zu erreichen:
 
-![Web-Oberfläche](https://github.com/stefanwatermann/frame/blob/main/Screenshots/FrameControl.png)
+![Web-Oberfläche](/Screenshots/FrameControl.png)
 
 
 DIY Foto-Rahmen Beispiele
 -------------------------
 Wiederverwertetes 13 Zoll Display eines defekten Laptops in einem Rahmen aus Erlenholz.
 
-![Foto-Rahmen](https://github.com/stefanwatermann/frame/blob/main/Screenshots/RaspiFrame.JPG)
+![Foto-Rahmen](/Screenshots/RaspiFrame.JPG)
 
 7 Zoll Raspberry Touchscreen in einem Holzrahmen von www.eleduino.com.
 
-![Foto-Rahmen](https://github.com/stefanwatermann/frame/blob/main/Screenshots/RaspiFrame2.JPG)
+![Foto-Rahmen](/Screenshots/RaspiFrame2.JPG)
